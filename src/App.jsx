@@ -60,11 +60,13 @@ function App() {
           <tbody>
           <tr>
             <th>ФИО</th>
+            <th>Зп за год</th>
             <th>Отпускные</th>
           </tr>
           {Object.entries(result).map(([key, value]) => (
             <tr key={key}>
               <td>{key}</td>
+              <td>{value.salary} р.</td>
               <td>{(value.salary / 12).toFixed(2)} р.</td>
             </tr>
           ))}
